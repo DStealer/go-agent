@@ -1,0 +1,8 @@
+{
+  "debug": true,
+  "pid": "/tmp/agent/pid",
+  "http": {
+    "enabled": true,
+    "listen": ":8080"
+  }
+}
