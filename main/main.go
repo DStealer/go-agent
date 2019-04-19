@@ -5,7 +5,13 @@ import (
 	"log"
 	"org/dstealer/agent/client"
 	"org/dstealer/agent/server"
+	"runtime"
 )
+
+func init() {
+	runtime.GOMAXPROCS(runtime.NumCPU())
+	log.SetFlags(log.Ldate | log.Ltime | log.Lshortfile)
+}
 
 var serverMode = flag.Bool("server", false, "run as server mode")
 

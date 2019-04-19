@@ -2,14 +2,14 @@ package model
 
 import "fmt"
 
-type ReadAgent struct {
+type RealAgent struct {
 	Name      string `json:"name"`
 	Version   string `json:"version"`
 	Status    string `json:"status"`
 	Timestamp int64  `json:"timestamp"`
 }
 
-func (r *ReadAgent) String() string {
+func (r *RealAgent) String() string {
 	return fmt.Sprintf("<name:%s version:%s status:%s timestamp:%v> ,",
 		r.Name, r.Version, r.Status, r.Timestamp)
 }

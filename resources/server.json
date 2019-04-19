@@ -1,8 +1,24 @@
 {
-  "debug": true,
-  "pid": "/tmp/agent/pid",
+  "pid": "/tmp/pid",
   "http": {
     "enabled": true,
-    "listen": ":8080"
-  }
+    "listen": "127.0.0.1:8080"
+  },
+  "tarballDir": "/home/DStealer/Temprary",
+  "agents": [
+    {
+      "name": "localhost",
+      "version": "0.0.1",
+      "tarball": "http://127.0.0.1:8080/monitor",
+      "md5": "",
+      "cmd": "start"
+    },
+    {
+      "name": "localhost",
+      "version": "0.0.1",
+      "tarball": "http://127.0.0.1:8080/falcon",
+      "md5": "",
+      "cmd": "start"
+    }
+  ]
 }

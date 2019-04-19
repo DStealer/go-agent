@@ -2,7 +2,7 @@ package model
 
 type HeartbeatRequest struct {
 	Hostname string       `json:"hostname"`
-	Agents   []*ReadAgent `json:"agents"`
+	Agents   []*RealAgent `json:"agents"`
 }
 
 type HeartbeatResponse struct {

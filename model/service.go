@@ -1,6 +1,6 @@
 package model
 
 type Service struct {
-	serviceName string `json:"serviceName"`
-	addr        string `json:"addr"`
+	ServiceName string `json:"serviceName"`
+	Addr        string `json:"addr"`
 }

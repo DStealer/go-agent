@@ -11,15 +11,24 @@ import (
 var config *GlobalConfig
 var lock = new(sync.RWMutex)
 
+type AgentConfig struct {
+	Name    string `json:"name"`
+	Version string `json:"version"`
+	Tarball string `json:"tarball"`
+	Md5     string `json:"md5"`
+	Cmd     string `json:"cmd"`
+}
+
 type HttpConfig struct {
 	Enabled bool   `json:"enabled"`
 	Listen  string `json:"listen"`
 }
 
 type GlobalConfig struct {
-	Debug bool        `json:"debug"`
-	Pid   string      `json:"pid"`
-	Http  *HttpConfig `json:"http"`
+	Pid        string         `json:"pid"`
+	Http       *HttpConfig    `json:"http"`
+	TarballDir string         `json:"tarballDir"`
+	Agents     []*AgentConfig `json:"agents"`
 }
 
 /*
